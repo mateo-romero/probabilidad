@@ -1,0 +1,49 @@
+---
+title: "Primer parcial Probabilidad y Estadistica "
+author: "Document Author"
+date: "`r Sys.Date()`"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+---
+
+## 1. Con base en la data Alumnos:
+## 2. Elaborar grafica para variables genero, carrera y estrato
+###     a. Barras
+###     b. Tortas
+###     b. Tortas
+###     ¿Que conclusiones puede obtener?
+## 3. Elabore una tabla que relacione la carrera con el genero. Explique.
+###     a. Tabla
+
+```{r, echo=FALSE, results='asis'}
+library(readxl)
+
+
+
+library(wesanderson)
+Alumnos <- read_excel("/Users/mateoromero/Desktop/ejemplos.xlsx")
+
+fabscar =  table(Alumnos$carrera,Alumnos$genero)
+knitr::kable(head(fabscar, 10))
+```
+
+###     b. Explicación
+## 4. Elabore una tabla con porcentaje que relacione la carrera con el estrato. Explique.
+## 5. Elaborar graficos para variables edad. Explique
+###  a. Barras
+###  b. Tortas.
+## 6. Graficas para variables continuas. Explique.
+###  a. Histograma
+###  b. Diagrama de caja
+## 7. Encuentre todas las medidas de tendencia central para las variables cuantitativas
+## 8. Encuentre las siguientes medidas de variablidad para las variables cuantitativas
+###  a. Rango.
+###  b. Varianza.
+###  c. Desviación estandar
+###  d. Coeficiente de variación.
+## 9. Encuentre las medidas de posición relativa (25, 75, 85 y 92). Explique
+## 10. Encuentre las medidas de asimetría para las variables cuantitativas, explique los resultados
+## 11. Encuentre las medidas de apuntamiento para las variables cuantitativas, explique los resultados.
+
